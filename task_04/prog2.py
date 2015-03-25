@@ -4,7 +4,7 @@ data=np.genfromtxt("https://raw.githubusercontent.com/anaderi/lhcb_trigger_ml/ma
                    ,skip_header=1,delimiter="\t")
 
 pl.hist2d(data.T[0],data.T[1],bins=40,cmap=pl.cm.Blues)
-pl.xlabel('M2AC')
-pl.ylabel('M2AB')
+pl.xlabel('M2AB')
+pl.ylabel('M2AC')
 pl.colorbar()
 pl.show()
