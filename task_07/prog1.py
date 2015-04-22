@@ -14,4 +14,4 @@ tab1 =tab1[['Title','Rating']]
 tab3= tab1.groupby('Title',as_index=False)
 tab1= tab3.sum()
 tab4= tab1.sort('Rating',ascending=False)
-tab4.head(25)
+print tab4.head(25)
