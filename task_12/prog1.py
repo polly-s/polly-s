@@ -67,3 +67,17 @@ for i in range(kIdx+1):
 
 # compare K=10 clustering vs. actual digits (PCA projections)
 fig = plt.figure()
+ax = fig.add_subplot(121)
+for i in range(10):
+     ind = (t==i)
+     ax.scatter(X[ind,0],X[ind,1], s=35, c=clr[i], marker=mrk[i], label='%d'%i)
+plt.legend()
+plt.title('Actual Digits')
+ax = fig.add_subplot(122)
+for i in range(kIdx+1):
+     ind = (cIdx[kIdx]==i)
+     ax.scatter(X[ind,0],X[ind,1], s=35, c=clr[i], marker=mrk[i], label='C%d'%i)
+plt.legend()
+plt.title('K=%d clusters'%KK[kIdx])
+plt.show()
+
